@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply font-sans text-slate-800 bg-slate-50;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10 shadow-lg;
+  }
+  .rainbow-gradient {
+    @apply bg-gradient-to-r from-rainbow-red via-rainbow-orange via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-purple;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-rainbow-purple;
+  }
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white rounded-full font-semibold 
+           hover:bg-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-white rounded-full font-semibold 
+           hover:bg-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  .container-main {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+}
