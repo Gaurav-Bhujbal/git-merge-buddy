@@ -7,29 +7,43 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'Poppins', 'sans-serif'],
+        sans: ['Baloo 2', 'Fredoka', 'Inter', 'sans-serif'],
+        display: ['Fredoka', 'Baloo 2', 'sans-serif'],
+        body: ['Baloo 2', 'Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#1E40AF',
+        primary: '#7C3AED',
         secondary: '#F59E0B',
         rainbow: {
           red: '#EF4444',
           orange: '#F97316',
-          yellow: '#EAB308',
+          yellow: '#FACC15',
           green: '#22C55E',
           blue: '#3B82F6',
           indigo: '#6366F1',
           purple: '#A855F7',
+          pink: '#EC4899',
         }
+      },
+      backgroundImage: {
+        'rainbow-stripe': 'linear-gradient(90deg,#EF4444,#F97316,#FACC15,#22C55E,#3B82F6,#A855F7,#EC4899)',
+        'sky-gradient': 'linear-gradient(180deg,#FEF3C7 0%,#DBEAFE 50%,#F5D0FE 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 3s infinite',
+        'wiggle': 'wiggle 2s ease-in-out infinite',
+        'bounce-slow': 'bounce 3s ease-in-out infinite',
+        'spin-slow': 'spin 12s linear infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         }
       }
     },
